@@ -11,12 +11,16 @@ import type {
     apiKey: import.meta.env.MICROCMS_API_KEY,
   });
   
-  // 型定義 
+  // 型定義
+  export type Category = {
+    name: string;
+  } & MicroCMSListContent;
+
   export type Blog = {
     title: string;
     body: string;
     thumbnail: MicroCMSImage;
-    category: string;
+    category: Category[];
   } & MicroCMSListContent;
   
   // APIの呼び出し

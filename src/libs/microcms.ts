@@ -14,13 +14,13 @@ import type {
   // 型定義
   export type Category = {
     name: string;
-  } & MicroCMSListContent;
+  };
 
   export type Blog = {
     title: string;
     body: string;
     thumbnail: MicroCMSImage;
-    category: Category[];
+    category: Category;
   } & MicroCMSListContent;
   
   // APIの呼び出し
